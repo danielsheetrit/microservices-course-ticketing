@@ -1,14 +1,20 @@
 import { Express } from "express";
 import mongoose, { Schema, Document, Model } from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const connect = async (app: Express) => {
   try {
     if (!process.env.JWT_KEY) {
-      throw new Error('JWT_KEY is not exist!')
+      throw new Error("JWT_KEY is not exist!");
     }
 
-    await mongoose.connect("mongodb://auth-mongo-srv:27017/auth");
-    console.log('Connected to MongoDB')
+    const connectionUri =
+      process.env.MONGO_URI || "mongodb://auth-mongo-srv:27017/auth";
+
+    await mongoose.connect(connectionUri);
+    console.log("Connected to MongoDB");
 
     app.listen(3000, () => {
       console.log("Listening on port 3000");
