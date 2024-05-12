@@ -1,0 +1,4 @@
+infra/k8s/secret-rsc.yaml
+
+auth/node_modules
+auth/node_modules/
