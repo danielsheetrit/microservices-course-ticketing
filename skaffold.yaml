@@ -12,7 +12,7 @@ build:
     projectId: ticketing-dev-422012
   artifacts:
     - image: us.gcr.io/ticketing-dev-422012/auth
-    - image: danieldev1/auth
+    # - image: danieldev1/auth
       context: auth
       docker:
         dockerfile: Dockerfile
