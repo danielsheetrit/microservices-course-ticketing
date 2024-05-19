@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 
 import { BadRequestError } from "../erros/bad-request-error";
 import { User } from "../models/User";
-import { validateRequest } from "../middlewares/validateRequest";
+import { validateRequest } from "../middlewares/validate-request";
 
 const singupRouter = express.Router();
 

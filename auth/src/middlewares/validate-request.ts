@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from "express";
-import { CustomError } from "../erros/custom-error-abstract";
 import { validationResult } from "express-validator";
 import { RequestValidationError } from "../erros/request-validation-error";
 
